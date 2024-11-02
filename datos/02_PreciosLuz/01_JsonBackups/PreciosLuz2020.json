@@ -1,0 +1,474 @@
+{
+    "data": {
+        "type": "Componentes del precio final mensual",
+        "id": "mer2",
+        "attributes": {
+            "title": "Componentes del precio final mensual",
+            "last-update": "2022-02-10T16:48:38.000+01:00",
+            "description": null
+        },
+        "meta": {
+            "cache-control": {
+                "cache": "MISS"
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "Mercado diario",
+            "id": "883",
+            "groupId": "Precio total (\u20ac/MWh)",
+            "attributes": {
+                "title": "Mercado diario",
+                "description": null,
+                "color": "#006699",
+                "type": null,
+                "magnitude": "price",
+                "composite": false,
+                "last-update": "2022-02-10T16:44:18.000+01:00",
+                "values": [
+                    {
+                        "value": 42.06,
+                        "percentage": 0.9301194161875276,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 36.54,
+                        "percentage": 0.9231935320869126,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 28.28,
+                        "percentage": 0.9208726799088244,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 17.81,
+                        "percentage": 0.877772301626417,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 21.7,
+                        "percentage": 0.9037900874635569,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 30.99,
+                        "percentage": 0.9168639053254438,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 35.2,
+                        "percentage": 0.9157127991675339,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 36.75,
+                        "percentage": 0.9449730007714066,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 42.74,
+                        "percentage": 0.9470418790161755,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 37.46,
+                        "percentage": 0.9416792357968828,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 42.91,
+                        "percentage": 0.9468225948808472,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 43.47,
+                        "percentage": 0.9342359767891683,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Mercado intradiario (subastas MIBEL y continuo)",
+            "id": "886",
+            "groupId": "Precio total (\u20ac/MWh)",
+            "attributes": {
+                "title": "Mercado intradiario (subastas MIBEL y continuo)",
+                "description": null,
+                "color": "#d90000",
+                "type": null,
+                "magnitude": "price",
+                "composite": false,
+                "last-update": "2021-01-07T17:27:23.000+01:00",
+                "values": [
+                    {
+                        "value": -0.02,
+                        "percentage": 0.00044228217602830603,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": -0.03,
+                        "percentage": 0.0007579585649317837,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": -0.01,
+                        "percentage": 0.000325626831650928,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": -0.02,
+                        "percentage": 0.0009857072449482504,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.01,
+                        "percentage": 0.00041649312786339027,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.01,
+                        "percentage": 0.00029585798816568053,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.01,
+                        "percentage": 0.00026014568158168577,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.01,
+                        "percentage": 0.00025713551041398817,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.02,
+                        "percentage": 0.00044316419233325947,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.04,
+                        "percentage": 0.001005530417295123,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": -0.03,
+                        "percentage": 0.0006619593998234774,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": -0.02,
+                        "percentage": 0.0004298302170642596,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Servicio interrumpibilidad",
+            "id": "1280",
+            "groupId": "Precio total (\u20ac/MWh)",
+            "attributes": {
+                "title": "Servicio interrumpibilidad",
+                "description": null,
+                "color": "#962a11",
+                "type": null,
+                "magnitude": "price",
+                "composite": false,
+                "last-update": "2020-12-01T08:13:08.000+01:00",
+                "values": [
+                    {
+                        "value": 0.03,
+                        "percentage": 0.000663423264042459,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 0.03,
+                        "percentage": 0.0007579585649317837,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 0.03,
+                        "percentage": 0.000976880494952784,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 0.04,
+                        "percentage": 0.001971414489896501,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0.04,
+                        "percentage": 0.001665972511453561,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0.04,
+                        "percentage": 0.0011834319526627221,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 0,
+                        "percentage": 0,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Pagos por capacidad",
+            "id": "892",
+            "groupId": "Precio total (\u20ac/MWh)",
+            "attributes": {
+                "title": "Pagos por capacidad",
+                "description": null,
+                "color": "#557a02",
+                "type": null,
+                "magnitude": "price",
+                "composite": false,
+                "last-update": "2022-02-10T16:48:38.000+01:00",
+                "values": [
+                    {
+                        "value": 3.11,
+                        "percentage": 0.06877487837240158,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 2.98,
+                        "percentage": 0.07529055078322386,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 2.39,
+                        "percentage": 0.07782481276457179,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 2.42,
+                        "percentage": 0.1192705766387383,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.26,
+                        "percentage": 0.0941274468971262,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.76,
+                        "percentage": 0.08165680473372781,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 3.23,
+                        "percentage": 0.0840270551508845,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.13,
+                        "percentage": 0.054769863718179476,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.37,
+                        "percentage": 0.05251495679149125,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.28,
+                        "percentage": 0.05731523378582201,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.38,
+                        "percentage": 0.052515445719329215,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 3.04,
+                        "percentage": 0.06533419299376746,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Servicios de ajuste",
+            "id": "Servicios ajuste",
+            "groupId": "Servicios ajuste",
+            "attributes": {
+                "title": "Servicios de ajuste",
+                "description": null,
+                "color": "#ffcf09",
+                "type": "Servicios de ajuste",
+                "magnitude": "price",
+                "composite": true,
+                "last-update": "2022-02-10T16:44:18.000+01:00",
+                "values": [
+                    {
+                        "value": 1.6899999999999997,
+                        "percentage": 1,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 1.82,
+                        "percentage": 1,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 2.4400000000000004,
+                        "percentage": 1,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 4.930000000000001,
+                        "percentage": 1,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 3.2900000000000005,
+                        "percentage": 1,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.1999999999999997,
+                        "percentage": 1,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 1.5499999999999998,
+                        "percentage": 1,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.1299999999999994,
+                        "percentage": 1,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.32,
+                        "percentage": 1,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.93,
+                        "percentage": 1,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 2.8200000000000003,
+                        "percentage": 1,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 2.4200000000000004,
+                        "percentage": 1,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "distinct",
+            "id": "Precio total (\u20ac/MWh)",
+            "groupId": "Precio total (\u20ac/MWh)",
+            "attributes": {
+                "title": "distinct",
+                "description": null,
+                "color": "#666666",
+                "type": "distinct",
+                "magnitude": null,
+                "composite": true,
+                "last-update": "2022-02-10T16:44:18.000+01:00",
+                "values": [
+                    {
+                        "value": 46.87,
+                        "percentage": 1,
+                        "datetime": "2020-01-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 41.339999999999996,
+                        "percentage": 1,
+                        "datetime": "2020-02-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 33.13,
+                        "percentage": 1,
+                        "datetime": "2020-03-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 25.18,
+                        "percentage": 1,
+                        "datetime": "2020-04-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 27.279999999999994,
+                        "percentage": 1,
+                        "datetime": "2020-05-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 35.98,
+                        "percentage": 1,
+                        "datetime": "2020-06-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 39.97,
+                        "percentage": 1,
+                        "datetime": "2020-07-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 41.00000000000001,
+                        "percentage": 1,
+                        "datetime": "2020-08-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 47.41,
+                        "percentage": 1,
+                        "datetime": "2020-09-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 42.63,
+                        "percentage": 1,
+                        "datetime": "2020-10-01T00:00:00.000+02:00"
+                    },
+                    {
+                        "value": 48.08,
+                        "percentage": 1,
+                        "datetime": "2020-11-01T00:00:00.000+01:00"
+                    },
+                    {
+                        "value": 48.91,
+                        "percentage": 1,
+                        "datetime": "2020-12-01T00:00:00.000+01:00"
+                    }
+                ]
+            }
+        }
+    ]
+}
