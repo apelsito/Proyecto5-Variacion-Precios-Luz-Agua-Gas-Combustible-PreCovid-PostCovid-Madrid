@@ -1,11 +1,25 @@
 # Se importa la librería para la llamada a la API
-import requests
-import pandas as pd
-import json
+import requests                # Realiza solicitudes HTTP para interactuar con APIs y obtener datos en formato JSON
+import pandas as pd            # Estructura y manipula los datos obtenidos en DataFrames, facilitando su análisis y transformación
+import json                    # Maneja datos en formato JSON, permitiendo cargar y decodificar respuestas de las APIs
 
 
 
 def hacer_request_json(url):
+    """
+    Realiza una solicitud HTTP GET a la URL especificada y devuelve la respuesta en formato JSON.
+    
+    Args:
+        url (str): La URL a la que se hará la solicitud.
+
+    Returns:
+        dict or None: El contenido de la respuesta en formato JSON si la solicitud es exitosa, 
+                      o None si ocurre algún error o si la respuesta no es un JSON válido.
+
+    Manejo de errores:
+        - Imprime mensajes de error específicos en caso de error HTTP, error de conexión, 
+          tiempo de espera agotado, errores de solicitud inesperados, o respuestas no válidas.
+    """    
     try:
         result = requests.get(url)
         result.raise_for_status() 
@@ -25,6 +39,18 @@ def hacer_request_json(url):
 
 
 def api_gas(fecha_inicio,fecha_final):
+    """
+    Realiza llamadas a la API para obtener datos históricos de precios de gas desde el catálogo de CNMC, 
+    filtra los datos por fechas y los devuelve como un DataFrame.
+
+    Args:
+        fecha_inicio (str): Fecha de inicio para el filtro en formato "AAAA-MM-DD".
+        fecha_final (str): Fecha de fin para el filtro en formato "AAAA-MM-DD".
+
+    Returns:
+        pd.DataFrame: DataFrame que contiene los registros de precios de gas filtrados entre las fechas especificadas.
+                      Incluye la columna 'fecha_de_negociacion' en formato datetime.
+    """
     # Llamada API para obtener la información del recurso del catálogo de un dataset 
     url = "https://catalogodatos.cnmc.es/api/3/action/package_search?q=Evolución de los precios por productos MIBGAS" 
     # Obtención del identificador del recurso con los datos del dataset 
@@ -44,6 +70,18 @@ def api_gas(fecha_inicio,fecha_final):
     return df_filtrado
 
 def api_luz(years,ruta_guardado):
+    """
+    Obtiene datos históricos de precios de electricidad para cada año especificado a través de la API de REE, 
+    guarda los datos en formato JSON y CSV, y devuelve un DataFrame con los datos concatenados.
+
+    Args:
+        years (list): Lista de años (en formato entero) para los que se desean obtener los datos.
+        ruta_guardado (str): Ruta del directorio donde se guardarán los archivos JSON y CSV resultantes.
+
+    Returns:
+        pd.DataFrame: DataFrame que contiene los datos de precios de electricidad para los años solicitados,
+                      con columnas 'precio' y 'fecha'.
+    """
     df = pd.DataFrame()
     for year in years:
         url = f"https://apidatos.ree.es/es/datos/mercados/componentes-precio?start_date={year}-01-01T00:00&end_date={year}-12-31T23:59&time_trunc=month&geo_limit=ccaa"

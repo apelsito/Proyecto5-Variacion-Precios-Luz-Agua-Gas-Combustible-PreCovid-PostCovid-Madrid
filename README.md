@@ -292,7 +292,6 @@ Para mejorar el análisis de precios y explorar patrones más detallados en los 
    - **Reportes Automatizados**: Crear reportes periódicos que informen sobre cambios significativos en los precios, y detectar anomalías que puedan alertar sobre subidas o bajadas inusuales.
 
 
-
 # Contribuciones 🤝
 
 Las contribuciones a este proyecto son muy bienvenidas. Si tienes alguna sugerencia, mejora o corrección, no dudes en ponerte en contacto o enviar tus ideas.

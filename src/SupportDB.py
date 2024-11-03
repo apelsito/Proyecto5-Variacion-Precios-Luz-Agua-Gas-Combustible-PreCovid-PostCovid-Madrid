@@ -2,22 +2,25 @@
 
 # Conexión y manejo de bases de datos PostgreSQL
 # -----------------------------------------------------------------------
-import psycopg2                                 # Conexión con bases de datos PostgreSQL
-from psycopg2 import OperationalError, errorcodes, errors  # Manejo de errores específicos de psycopg2
+import psycopg2                                   # Conexión y ejecución de consultas en bases de datos PostgreSQL
+from psycopg2 import OperationalError, errorcodes, errors  # Manejo de errores específicos de psycopg2 para controlar excepciones
 
 # Manipulación de DataFrames
 # -----------------------------------------------------------------------
-import pandas as pd                             # Manipulación y análisis de datos en estructuras DataFrame
-# Ignorar warings
+import pandas as pd                               # Manipulación y análisis de datos en estructuras DataFrame, ideal para datos tabulares
+
+# Ignorar warnings
 # -----------------------------------------------------------------------
 import warnings
-warnings.filterwarnings("ignore")
-# Para poner barras progreso
+warnings.filterwarnings("ignore")                 # Suprime advertencias, manteniendo la salida de consola más limpia
+
+# Para poner barras de progreso
 # -----------------------------------------------------------------------
-from tqdm import tqdm
+from tqdm import tqdm                             # Muestra barras de progreso en bucles largos, facilitando el seguimiento
+
 # Configuración
 # -----------------------------------------------------------------------
-pd.set_option('display.max_columns', None) # para poder visualizar todas las columnas de los DataFrames
+pd.set_option('display.max_columns', None)        # Configura Pandas para mostrar todas las columnas de los DataFrames en la consola
 
 
 import psycopg2

@@ -2,25 +2,40 @@
 
 # Librerías para control y automatización de navegadores (Web Scraping)
 # -----------------------------------------------------------------------
-from selenium import webdriver                   # Para controlar el navegador automáticamente
-from selenium.webdriver.chrome.service import Service  # Para manejar los servicios de ChromeDriver
-from selenium.webdriver.common.by import By      # Para seleccionar elementos en el DOM de la página
-from selenium.webdriver.chrome.options import Options  # Para establecer opciones en el navegador (como headless mode)
+from selenium import webdriver                   # Controla el navegador automáticamente para realizar acciones de scraping
+from selenium.webdriver.chrome.service import Service  # Maneja los servicios del ChromeDriver, que permite ejecutar Chrome sin intervención manual
+from selenium.webdriver.common.by import By      # Localiza y selecciona elementos específicos dentro del DOM de una página web
+from selenium.webdriver.chrome.options import Options  # Establece opciones para Chrome (ej., headless mode para ejecutar sin interfaz gráfica)
 
 # Librerías para el tratamiento y manipulación de datos
 # -----------------------------------------------------------------------
-import pandas as pd             # Para manipular estructuras de datos como DataFrames
-import numpy as np              # Para cálculos numéricos y arrays multidimensionales
-import datetime                 # Para manejar fechas y horas
+import pandas as pd             # Estructura y manipula datos en DataFrames, facilitando análisis y transformación de datos
+import numpy as np              # Realiza cálculos numéricos avanzados y manipulación de arrays multidimensionales
+import datetime                 # Gestiona fechas y tiempos, útil para ordenar y filtrar datos por periodos específicos
 
-import os
-import sys
-sys.path.append("../")
-from time import sleep
-import pdfplumber
+# Librerías del sistema y utilidades
+# -----------------------------------------------------------------------
+import os                       # Permite interactuar con el sistema operativo, gestionar rutas y archivos
+import sys                      # Permite modificar las rutas de búsqueda de módulos para importar scripts personalizados
+sys.path.append("../")          # Añade el directorio padre al PATH, permitiendo importar módulos personalizados en subcarpetas
 
+from time import sleep          # Pausa la ejecución por un tiempo determinado, útil para evitar bloqueos en scraping debido a solicitudes continuas
+import pdfplumber               # Extrae texto de archivos PDF, permitiendo la conversión de datos en PDF a formatos analizables
 
 def precios_combustible(fechas_inicio,fechas_fin):
+    """
+    Realiza scraping en la página web del Ministerio de Energía para obtener precios de combustibles en un rango de fechas específico,
+    configurando el navegador para descargar archivos automáticamente.
+
+    Args:
+        fechas_inicio (list): Lista de fechas de inicio en formato "DD/MM/AAAA" para cada rango de consulta.
+        fechas_fin (list): Lista de fechas de fin en formato "DD/MM/AAAA" para cada rango de consulta.
+
+    Proceso:
+        - Configura el navegador Chrome con preferencias de descarga automática.
+        - Accede a la página, selecciona las fechas de consulta y las series de combustibles (Gasolina 98, Diésel, Diésel Premium).
+        - Descarga los archivos correspondientes y renombra el archivo descargado según el año de la consulta.
+    """
     for inicio , fin  in zip(fechas_inicio,fechas_fin):
 
             ruta_padre = os.path.dirname(os.getcwd())
@@ -92,7 +107,22 @@ def precios_combustible(fechas_inicio,fechas_fin):
             os.rename(f"{ruta_hacer}/{old_name}",f"{ruta_hacer}/{new_name}")
 
 def excel_a_Dataframe(ruta_archivos):
+    """
+    Lee múltiples archivos Excel de una carpeta, extrae y concatena las hojas en un solo DataFrame,
+    asignando etiquetas de combustible según el nombre de la hoja.
 
+    Args:
+        ruta_archivos (str): Ruta del directorio que contiene los archivos Excel.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de todas las hojas concatenadas y una columna 'combustible' 
+                      que identifica el tipo de combustible en cada registro.
+                      
+    Proceso:
+        - Itera sobre cada archivo Excel en el directorio especificado.
+        - Lee cada hoja en el archivo, añade una columna con el nombre del combustible y la concatena en un DataFrame.
+        - Estandariza los nombres de los combustibles para una mayor consistencia en el DataFrame final.
+    """
     df_combustibles_total = []
 
     for archivo in os.listdir(ruta_archivos):
@@ -115,6 +145,20 @@ def excel_a_Dataframe(ruta_archivos):
     return df_final
 
 def pdf_a_df(ruta_archivos):
+    """
+    Lee múltiples archivos PDF de una carpeta, extrae tablas de páginas específicas y guarda los datos en archivos CSV.
+
+    Args:
+        ruta_archivos (str): Ruta del directorio que contiene los archivos PDF.
+
+    Proceso:
+        - Itera sobre cada archivo PDF en el directorio especificado.
+        - Extrae las tablas de las páginas 1 y 2 de cada archivo y convierte los datos en un DataFrame.
+        - Concatena las tablas extraídas y guarda el DataFrame resultante en un archivo CSV, nombrado según el año en el nombre del archivo PDF.
+        
+    Manejo de errores:
+        - Si ocurre algún error durante la lectura o extracción de datos de un PDF, se imprime un mensaje de advertencia y el proceso continúa.
+    """
     for archivo in os.listdir(ruta_archivos):
         try:
             print(archivo)

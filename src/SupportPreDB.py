@@ -1,12 +1,13 @@
 # Tratamiento y manipulación de datos
 # -----------------------------------------------------------------------
-import pandas as pd                                 # Manipulación de estructuras de datos como DataFrames
-import numpy as np                                  # Cálculos numéricos y manejo de arrays
-import datetime                                     # Manipulación de fechas y tiempos
+import pandas as pd             # Manipulación y análisis de datos en estructuras DataFrame
+import numpy as np              # Realización de cálculos numéricos y manipulación de arrays multidimensionales
+import datetime                 # Manejo y procesamiento de fechas y tiempos para análisis temporal
 
 # Visualización de progreso
 # -----------------------------------------------------------------------
-from tqdm import tqdm                               # Creación de barras de progreso durante bucles
+from tqdm import tqdm           # Crea barras de progreso visuales para bucles largos, mejorando la legibilidad del progreso
+
 
 def crear_dictio(df,columna):
     """
@@ -37,7 +38,17 @@ def crear_dictio(df,columna):
     return dictio
 
 def df_a_db(dictio,df,columna):
-    
+    """
+    Mapea los valores de una columna específica en un DataFrame según un diccionario y devuelve el DataFrame modificado.
+
+    Args:
+        dictio (dict): Diccionario de mapeo donde las claves son los valores originales y los valores son los nuevos valores deseados.
+        df (pd.DataFrame): DataFrame que contiene la columna a mapear.
+        columna (str): Nombre de la columna en el DataFrame que será modificada usando el diccionario de mapeo.
+
+    Returns:
+        pd.DataFrame: DataFrame con la columna especificada modificada según el diccionario de mapeo.
+    """
     df[columna] = df[columna].map(dictio)
 
     return df
